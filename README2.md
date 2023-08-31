@@ -1,21 +1,35 @@
 
 # Automated Online Sequential ESD (Python)
 
-This package includes Python codes for online sequential ESD(osESD), a variation of GESD tests.
-It is a statistical testing method for anomaly detection in univariate time series datasets.
-We provide osESD and an automated grid search method auto-osESD.
-Auto-osESD can be used to find the best parameters for a specific dataset,
-using parameters either provided explicitly or basic parameters if not provided.
+This package includes Python codes for online sequential ESD(osESD), a variation of GESD tests.<br>
+It is a statistical testing method for anomaly detection in univariate time series datasets.<br>
+We provide osESD and an automated grid search method auto-osESD.<br>
+Auto-osESD can be used to find the best parameters for a specific dataset,<br>
+using parameters either provided explicitly or basic parameters if not provided.<br>
+
+Original paper can be found in [LINK].
 
 ## Installation
 ### 1. Clone repository.
+Clone or download zip. file of our repository into local device.
 
 ### 2. Download dependencies
-
-
+Download dependencies written in requirements.txt.
+This can be easily done by running the below code in command prompt.
+```
+pip install -r requirements.txt
+```
 
 ## Versions
-
+Python = 3.8.16<br>
+argparse = 1.1<br>
+numpy = 1.24.3<br>
+pandas = 1.5.3<br>
+torch = 1.13.1<br>
+matplotlib = 3.7.0<br>
+scikit-learn = 1.2.1<br>
+scipy = 1.10.1<br>
+rrcf = 0.4.4<br>
 
 
 
@@ -78,9 +92,6 @@ python auto_osESD.py --dataset data_name --result_directory result_directory --l
 
 - `REditorSupport.r`
 
-<!-- markdownlint-disable MD041 -->
-
-
 
 
 
@@ -92,7 +103,7 @@ If the `useTesting` is `true`, `linux/arm64` platform `debian` also supported.
 
 
 
---->
+
 
 
 
@@ -165,7 +176,7 @@ This feature set `PIP_BREAK_SYSTEM_PACKAGES=1` when installing Python packages.
 ## References
 
 - [Rocker Project](https://rocker-project.org)
-
+---!>
 
 ---
 
