@@ -1,16 +1,60 @@
 
-# R (via apt) (r-apt)
+# Automated Online Sequential ESD (Python)
 
-Installs the latest R, some R packages, and needed dependencies. Note: May require source code compilation for some R packages.
+This package includes Python codes for online sequential ESD(osESD), a variation of GESD tests.
+It is a statistical testing method for anomaly detection in univariate time series datasets.
+We provide osESD and an automated grid search method auto-osESD.
+Auto-osESD can be used to find the best parameters for a specific dataset,
+using parameters either provided explicitly or basic parameters if not provided.
+
+## Installation
+### 1. Clone repository.
+
+### 2. Download dependencies
+
+
+
+## Versions
+
+
+
+
+
+
 
 ## Example Usage
 
-```json
-"features": {
-    "ghcr.io/rocker-org/devcontainer-features/r-apt:0": {}
-}
+After cloning this repository and installing all dependencies, one can run our osESD method with the below code,
+with data_name being directory to dataset and result_directory being directory to where indices of anomalies be exported.
+
+```
+python main.py --dataset data_name --result_directory result_directory
 ```
 
+To run auto-osESD, the below code should be run.
+
+```
+python auto_osESD.py --dataset data_name --result_directory result_directory
+```
+
+To change parameters and provide new ones, the below code should be modified and run.
+
+```
+python auto_oseSD.py --dataset data_name --result_directory result_directory
+--labeled True --sizes "50,100,150,200" --conditions "0,1" --maxrs "3,5,7,10"
+--dwins "2,5,10,30" --rwins "4,5,10,30" --alphas "0.0001,0.005,0.01,0.05"
+--weights "0,0,1,0.1" --learning_length 0.15 --min_max_switch False
+```
+
+Finally, if the dataset is unlabeled, then one should set '--labeled' to False.
+```
+python auto_osESD.py --dataset data_name --result_directory result_directory --labeled false
+```
+
+
+
+
+<!---
 ## Options
 
 | Options Id | Description | Type | Default Value |
@@ -25,6 +69,9 @@ Installs the latest R, some R packages, and needed dependencies. Note: May requi
 | useTesting | For Debian, install packages from Debian testing. If false, the R package installed by apt may be out of date. | boolean | true |
 | installBspm | Install and enable BSPM (Bridge to System Package Manager) to install R packages. This option is only working on Ubuntu now. | boolean | false |
 
+
+
+
 ## Customizations
 
 ### VS Code Extensions
@@ -33,13 +80,25 @@ Installs the latest R, some R packages, and needed dependencies. Note: May requi
 
 <!-- markdownlint-disable MD041 -->
 
+
+
+
+
 ## Supported platforms
 
 `linux/amd64` platform `debian`, `ubuntu:focal` and `ubuntu:jammy`.
 
 If the `useTesting` is `true`, `linux/arm64` platform `debian` also supported.
 
-## R package installation
+
+
+--->
+
+
+
+
+
+
 
 ### Binary installation via apt
 
