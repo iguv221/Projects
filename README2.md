@@ -1,11 +1,15 @@
 
 # Automated Online Sequential ESD (Python)
 
-This package includes Python codes for online sequential ESD(osESD), a variation of GESD tests.<br>
-It is a statistical testing method for anomaly detection in univariate time series datasets.<br>
-We provide osESD and an automated grid search method auto-osESD.<br>
-Auto-osESD can be used to find the best parameters for a specific dataset,<br>
-using parameters either provided explicitly or basic parameters if not provided.<br>
+This package includes Python codes for online sequential ESD(osESD), a variation of GESD tests.  
+
+It is a statistical testing method for anomaly detection in univariate time series datasets.  
+
+We provide osESD and an automated grid search method auto-osESD.  
+
+Auto-osESD can be used to find the best parameters for a specific dataset,
+
+using parameters either provided explicitly or basic parameters if not provided.
 
 Original paper can be found in [LINK].
 
